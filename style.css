@@ -3,16 +3,19 @@
     padding: 0;
 }
 .div1{
-    background-image: url(https://img.freepik.com/free-photo/bermuda-triangle-mystery-event_23-2151625806.jpg?t=st=1720618055~exp=1720621655~hmac=7fa380dd3a60958d297688ba7a409776a40b4012f0240c8683b2c8d77fa2b6ff&w=900);
+    background-image: url(/assets/image\ 6.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: 100vw;   
+    width: 100vw;
+    background-attachment: fixed;   
 }
 .navbar{
     background-color: rgba(0, 0, 0, 0.2);
     padding-bottom: 2em;
+    opacity: 0; /* Ensure the image is initially hidden */
+    animation: navbarUp 1s ease-in-out forwards; 
 }
 .logo img{
     height: 3em;
@@ -41,35 +44,56 @@
     margin-top: -1.5em;
 }
 .nav-btn button{
+    background-color: white;
+    color: rgb(0, 0, 0);
     padding-right: 2em;
     padding-left: 2em;
     padding-top: 0.5em;
     padding-bottom: 0.5em;
     border-radius: 4px;
-    border: 0px;
+    border: none;
 }
 .nav-btn button a{
     text-decoration: none;
     color: black;
     font-weight: bold;
 }
-.home{
-    margin-left: 18em;
-    margin-top: 10em;
+.nav-btn button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    border: solid 1px white;
     color: white;
 }
-.home h2{
-    font-size: 60px;
-    font-family: 'CARIBBEAN TOOL', sans-serif;
+.nav-btn button a:hover{
+    color: white;
 }
-.home-head h2{
-    font-size: 80px;
-    font-family: 'PiratesBlackbeard', sans-serif;
+.home{
+    height: 1em;
 }
-.title{
-    margin-left: 31em;
-    margin-top: -12.75em;
+.home-head img{
+    width: 700px;
+    height: 15em;
+    margin-left: 25%;
+    margin-top: 10%;
+    opacity: 0; /* Ensure the image is initially hidden */
+    animation: fadeInSlideUp 3s ease-in-out forwards; 
 }
-.title h2{
-    font-size: 200px;
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes navbarUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
