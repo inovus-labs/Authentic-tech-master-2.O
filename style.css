@@ -1,81 +1,149 @@
-*{
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-.div1{
-    background-image: url(https://github.com/user-attachments/assets/6c6ecba3-deaf-41a4-88f8-87230af4caae);
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.div1 {
+    background-image: url(/assets/image\ 6.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     background-attachment: fixed;   
 }
-.navbar{
+
+.navbar {
     background-color: rgba(0, 0, 0, 0.2);
-    padding-bottom: 2em;
-    opacity: 0; 
-    animation: navbarUp 1s ease-in-out forwards; 
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: navbarUp 1s ease-in-out forwards;
 }
-.logo img{
+
+.logo img {
     height: 3em;
-    margin-top: 1.5em;
-    margin-left: 10em;
 }
-.nav-item{
-    margin-left: 28em;
-    margin-top: -2.5em;
-}
-.nav-link{
+
+.nav-links {
     display: flex;
     list-style: none;
-    text-decoration: none;
 }
-.nav-link a{
+
+.nav-links a {
     text-decoration: none;
-    color: rgb(255, 255, 255);
+    color: white;
     padding: 1em;
     font-weight: 700;
     font-size: 16px;
-    font-family: 'Poppins',sans-serif;
 }
-.nav-btn{
-    margin-left: 68em;
-    margin-top: -1.5em;
-}
-.nav-btn button{
+
+.nav-btn button {
     background-color: white;
-    padding-right: 2em;
-    padding-left: 2em;
-    padding-top: 0.5em;
-    padding-bottom: 0.5em;
+    color: black;
+    padding: 0.5em 2em;
     border-radius: 4px;
     border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 .nav-btn button a{
     text-decoration: none;
     color: black;
-    font-weight: bold;
 }
-.nav-btn button:hover{
-    background-color: rgba(255, 255, 255, 0);
-    border: solid 1px white;
-    color: white;
+
+.nav-btn button:hover {
+    background-color:rgba(255, 255, 255, 0);
+    border: solid 1px rgb(255, 255, 255);
 }
 .nav-btn button a:hover{
     color: white;
 }
-.home{
-    height: 1em;
+.home-head img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 10% auto;
+    opacity: 0;
+    animation: fadeInSlideUp 3s ease-in-out forwards;
 }
-.home-head img{
-    width: 700px;
-    height: 15em;
-    margin-left: 25%;
-    margin-top: 10%;
-    opacity: 0; 
-    animation: fadeInSlideUp 3s ease-in-out forwards; 
+
+.hamburger {
+    display: none;
+    cursor: pointer;
 }
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in;
+    background-color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: fixed;
+        left: -100%;
+        top: 5.5rem;
+        flex-direction: column;
+        background-color: rgba(255, 255, 255, 0);
+        width: 100%;
+        text-align: right;
+        font-family: 'Poppins',sans-serif;
+        transition: 0.3s;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-item {
+        margin: 1.5rem 0;
+    }
+    .nav-links li{
+        padding: 0.5em;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-6px) rotate(-45deg);
+    }
+
+    .nav-btn {
+        display: flex;
+    }
+    .home-head img {
+        max-width: 80%;
+        height: 10em;
+        display: block;
+        margin-top: 50% ;
+        opacity: 0;
+        animation: fadeInSlideUp 3s ease-in-out forwards;
+    }
+
+}
+
 @keyframes fadeInSlideUp {
     0% {
         opacity: 0;
@@ -86,6 +154,7 @@
         transform: translateY(0);
     }
 }
+
 @keyframes navbarUp {
     0% {
         opacity: 0;
