@@ -14,7 +14,7 @@
 .navbar{
     background-color: rgba(0, 0, 0, 0.2);
     padding-bottom: 2em;
-    opacity: 0; /* Ensure the image is initially hidden */
+    opacity: 0; 
     animation: navbarUp 1s ease-in-out forwards; 
 }
 .logo img{
@@ -74,7 +74,7 @@
     height: 15em;
     margin-left: 25%;
     margin-top: 10%;
-    opacity: 0; /* Ensure the image is initially hidden */
+    opacity: 0; 
     animation: fadeInSlideUp 3s ease-in-out forwards; 
 }
 @keyframes fadeInSlideUp {
