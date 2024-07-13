@@ -148,6 +148,10 @@
     font-weight: 600;
 }
 @media screen and (max-width: 768px) {
+    .logo img{
+        padding-left: 0em;
+        height: 2.5em;
+    }
     .nav-links {
         position: fixed;
         left: -100%;
