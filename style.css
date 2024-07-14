@@ -57,19 +57,13 @@
     border: none;
     cursor: pointer;
     transition: all 0.3s ease;
-}
-.nav-btn button a{
-    text-decoration: none;
-    color: black;
     font-weight: bold;
 }
 
 .nav-btn button:hover {
     background-color:rgba(255, 255, 255, 0);
     border: solid 1px rgb(255, 255, 255);
-}
-.nav-btn button a:hover{
-    color: white;
+    color:white;
 }
 .home-head img {
     max-width: 50%;
@@ -79,7 +73,6 @@
     opacity: 0;
     animation: fadeInSlideUp 3s ease-in-out forwards;
 }
-
 .hamburger {
     display: none;
     cursor: pointer;
@@ -147,7 +140,17 @@
     font-size: 13px;
     font-weight: 600;
 }
+
 @media screen and (max-width: 768px) {
+    .div1 {
+        background-image: url(https://github.com/user-attachments/assets/6c6ecba3-deaf-41a4-88f8-87230af4caae);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%; 
+        background-attachment: fixed;   
+    }
     .logo img{
         padding-left: 0em;
         height: 2.5em;
