@@ -142,15 +142,6 @@
 }
 
 @media screen and (max-width: 768px) {
-    .div1 {
-        background-image: url(https://github.com/user-attachments/assets/6c6ecba3-deaf-41a4-88f8-87230af4caae);
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        height: 100vh;
-        width: 100%; 
-        background-attachment: fixed;   
-    }
     .logo img{
         padding-left: 0em;
         height: 2.5em;
